@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content  %}
+<!-- crispy tags defines that field must be required -->
+{% load crispy_forms_tags %}
+<form method="post" style="height: 500px; width: 50%; margin: auto;" class="pt-4" enctype="multipart/form-data">
+    {% csrf_token %}
+    <!-- {{form}} -->
+
+    <!-- form ta para er moto ashbe -->
+    <!-- {{form.as_p}}  -->
+
+    {{form | crispy}} 
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+{% endblock %}
