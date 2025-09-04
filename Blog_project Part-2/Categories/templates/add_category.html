@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags%}
+
+{% block content %}
+<!-- <h1>Add Author  Page</h1> -->
+<form style="width: 50%; margin: auto;" method="post">
+    <h1 style="color: rgb(79, 42, 15);">Add Category Page</h1>
+    {% csrf_token %}
+    {{form|crispy}}
+    <!-- <button class="btn btn-primary">Submit</button> -->
+    <button class="btn btn-warning">Submit</button>
+</form>
+{% endblock content %}
